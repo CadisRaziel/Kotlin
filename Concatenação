@@ -1,0 +1,14 @@
+fun main() {
+	
+    //concatenação (é igual o c#)
+    
+    var nome = "Vitor"
+    var idade = 28
+    //println("Meu nome é " + nome + " eu tenho " + idade + " anos")
+    
+    
+    //forma simplificada 
+    // igual o javascript porém sem as crases `` e chave {} (Bem mais facil não ?)
+    
+    println("Meu nome é $nome e tenho $idade anos")
+}
