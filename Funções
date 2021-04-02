@@ -1,0 +1,41 @@
+//Ao inves de colocar function como de costume, coloque apenas fun
+
+fun main() {
+    
+    //criando uma função externa eu posso executa-la dentro desta função
+    QualOSeuNome()       
+ }
+
+
+fun QualOSeuNome(){
+    println("Meu nome é Vitor")
+}
+
+
+//=============================
+//Passando parametros
+
+fun main() {
+    
+    QualOSeuNome("Vitor", 28)       
+ }
+
+
+fun QualOSeuNome(nome: String, idade: Int){
+    println("Meu nome é $nome e tenho $idade anos")
+}
+
+//================================
+//outro exemplo com parametros
+
+
+fun main() {
+    Cores("Vermelho", "Azul", "Amarelo")
+    
+}
+
+   
+fun Cores(cor1: String, cor2: String, cor3: String){
+    println("Primeira cor: $cor1, Segunda cor: $cor2, Terceira cor: $cor3")
+}
+
