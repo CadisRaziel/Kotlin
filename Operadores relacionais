@@ -1,0 +1,20 @@
+== Operador de igual
+<  Operador de menor
+>  Operador de maior
+<= Operador de menor igual
+>= Operador de maior igual
+!= Operador de diferente
+
+
+    var valor1 = 20
+    var valor2 = 10
+    
+    println(valor1 == valor2)
+    println(valor1 < valor2)
+    println(valor1 > valor2)
+    println(valor1 >= valor2)
+    println(valor1 <= valor2)
+    println(valor1 != valor2)
+    
+    
+    Obs: eles sempre retornam verdadeiro ou falso
