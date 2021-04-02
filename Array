@@ -1,0 +1,11 @@
+
+fun main() {
+    
+    //array misto de numeros e string
+	var nomes = arrayOf("Vitor", "Gi", "Ari", "Rosana", "Monique", "Michele", 10, 20)
+    println(nomes[0])
+    
+    //array só de numeros
+    var numeros = intArrayOf(100,200,300,400)
+    println(numeros[1])
+}
