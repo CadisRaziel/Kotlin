@@ -1,0 +1,10 @@
+
+fun main() {
+    
+    //definindo variavel com valor nulo preciso fazer dessa forma (nunca esquecer do ?)
+    var nome: String? = null
+    
+    println(nome)
+    println(nome!!.length) //!! a variavel nao pode ter o valor null
+ 
+}
