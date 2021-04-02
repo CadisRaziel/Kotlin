@@ -1,0 +1,23 @@
+While e For
+
+//While
+var contador = 0
+    
+    while(contador < 5){
+        println("Contador: $contador")
+        contador++
+        ou
+        ++contador
+    }
+    
+    
+//=============================
+For
+
+//Veja que nao precisamos criar nenhuma variavel fora
+//criamos o contador dentro da condição mesmo ()
+//e colocamos o intervalor (in 0..5) ou seja vai do 0 ao 5
+
+	 for(contador in 0..5){
+        println("contador: $contador")
+     }
