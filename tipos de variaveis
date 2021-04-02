@@ -1,0 +1,40 @@
+java é bem parecido com c# como podemos ver
+
+
+fun main() {
+    //tipos de variaveis
+    var nome = "Vitor" // String (maneira mais simples)
+    //ou
+    var Nome: String = "Brussolo Zerbato"
+    
+    //=====================   
+    
+    var numero = 10 // Inteiro (Maneira mais simples)
+    //ou
+    var idade: Int = 28
+    
+    //=====================
+    //Double -> Numeros decimais, 16 números após o ponto (posso por 16 numeros após o .)
+    
+    val dinheiro = 50.00    
+    
+    //=====================
+    //Float -> Numeros decimais, 7 números após o ponto (posso por 7 numeros após o .)
+    //não esqueça de for o (f) no final do numero
+    
+    val dinheiro2 = 18.50f
+    
+    //=====================
+    //long -> Números inteiros (para por muitos numeros inteiros como no c#)
+   
+    var long = 3165065106510651
+    
+    
+    //=====================
+    //boolean (verdadeiro ou falso)
+    
+    var resultado = true
+    
+    
+    println(resultado)
+}
