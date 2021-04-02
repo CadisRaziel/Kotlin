@@ -1,0 +1,109 @@
++ Operador de soma
+- Operador de subtração
+/ Operador de divisão
+* Operador de multiplicação
+% Modulo - Resto da divisão
+++ Incremento
+-- Decremento
+
+
+
+
+fun main() {
+    
+    var soma1 = 20
+    var soma2 = 10
+   
+    var sub1 = 20
+    var sub2 = 10
+  
+    
+    var mult1 = 5
+    var mult2 = 5
+
+    
+    var div1 = 20
+    var div2 = 10
+  
+    
+    var modulo1 = 20
+    var modulo2 = 10
+ 
+    
+    println(soma1 + soma2)
+    println(sub1 - sub2)
+    println(mult1 * mult2)
+    println(div1 / div2)
+    println(modulo1 % modulo2)
+       
+    
+    
+    // ou 
+    
+    
+    var soma1 = 20
+    var soma2 = 10
+    var soma = soma1 + soma2
+    println(soma)
+    
+    var sub1 = 20
+    var sub2 = 10    
+    var sub = sub1 - sub2
+    println(sub)
+    
+    var mult1 = 5
+    var mult2 = 5    
+    var mult = mult1 * mult2
+    println(mult)
+    
+    var div1 = 20
+    var div2 = 10    
+    var div = div1 / div2
+    println(div)
+    
+    var modulo1 = 20
+    var modulo2 = 10    
+    var modulo = modulo1 % modulo2
+    println(modulo)
+    
+    
+    
+    
+    
+    
+    
+   // incremento e decremento
+   
+   
+    
+fun main() {
+    
+    var numero1 = 20
+    var numero2 = 10
+    
+    //diferente das outras linguens o ++ tem que ser antes da variavel
+    //para incrementar só mais 1 na variavel coloca o ++ antes
+    println(++numero1)
+    
+    //se eu atribuiur um valor na frente da variavel ela vai somar ou seja 20+20(muito cuidado !!!)
+    //resumindo se eu quiser incrementar um valor mais que 2 é só na frente
+    println(numero1+20)
+    
+    
+    var numero3 = 20
+    var numero4 = 10
+    
+    //para fazer o decremento colocamos -- antes da variavel
+    println(--numero3)
+    
+    
+    //cuidado com o incremento e o decremento na frente da variavel !!
+    println(numero3-1)
+          
+          
+   	var numero5 = 10
+  	var incremento = +80
+    println(numero5 + incremento)
+    
+}
+    
