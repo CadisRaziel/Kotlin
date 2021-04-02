@@ -1,0 +1,38 @@
+exemplo 1
+
+    //o if só executa se a condição for verdadeira (a condição e o que colocamos entre os () )
+    //se o if for falso ele vai cair no Else
+    if(false){
+       println("Se for true vai mostrar essa frase")
+    }else {
+        println("Se for false vai mostrar essa frase que esta no else")
+    }
+    
+    
+    
+exemplo 2
+
+ 	
+ var sexo = "Masculino"
+    
+    if(sexo == "Masculino"){
+        println("Sexo Masculino")
+    }else if(sexo == "Feminono"){        
+    	println("Sexo Feminino")
+    }else {
+        println("Sexo indefinido")
+    }	
+
+
+exemplo 3
+
+	
+    var idade = 17
+    if(idade < 18){
+        println("Proibida a entrada")
+    }else if(idade >= 18 ){
+        println("Entrada liberada")
+    }else {
+        println("Digite sua idade")
+    }
+    
