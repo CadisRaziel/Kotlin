@@ -1,0 +1,28 @@
+    
+    //faz a mesma coisa que o if else porém de forma reduzida !!!
+    //ele elimina o else porém podemos coloca-lo
+    
+    when(false) {
+        true -> println("Veradeiro")
+        false -> println("Falso")
+        
+        
+        
+        
+// outro exemplo
+
+fun main() {
+    
+    //imagina que vamos fazer opções de suco
+    //ele elimina o else porém podemos coloca-lo
+    
+    var opcao = 0
+    
+    when(opcao) {
+      	1 -> println("Suco de laranja")
+        2 -> println("Suco de uva")
+        3 -> println("Suco de acerola")
+        else -> println("Selecione uma opção de suco")
+    } 
+}
+ 
