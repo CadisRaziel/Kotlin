@@ -1,0 +1,18 @@
+no kotlin as variaveis e constantes são diferentes
+
+o var = variavel
+o val = constante
+
+
+maneiras certas de escrever o nome da variavel:
+var Nome =
+var nome =
+var NOME =
+var _nome =
+
+maneiras erradas de escrever nome da variavel:
+var 92nome =
+var @nome = 
+var %nome = 
+var palávra = 
+var estação = 
