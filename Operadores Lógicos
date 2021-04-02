@@ -1,0 +1,24 @@
+&& = E
+|| = ou
+
+    //exemplo &&
+   //&& se os dois lados forem veradeiros ele da verdadeiro
+   //&& se um dos lados for falso ele vai dar falso ! (se os dois lados for falso tambem da falso)
+   //para && dar verdadeiro os dois lados precisam dar veradeiro ! 
+	if(10 == 10 && 10 < 20){
+        println("Verdadeiro")
+    } else {
+        println("Falso")
+    }
+    
+    
+    
+    //exemplo ||
+    //|| se os dois lados forem verdadeiro da verdadeiro
+    //|| se um dos lados for falso ele ainda vai dar verdadeiro (pois se apenas 1 der verdadeiro ele da true)
+    //agora se os dois lados for falso ai da falso
+    if(10 == 10 || 10 < 20){
+        println("Verdadeiro")
+    }else {
+        println("Falso")
+    }
