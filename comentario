@@ -1,0 +1,15 @@
+fun main() {
+
+    //esse é um comentario 
+    //viu como é simples e igual as outras linguagens!!!
+    
+    /*Comentando 
+     em
+     varias
+     linhas*/
+    
+    var nome = "Vitor"
+    nome = "Brussolo Zerbato"
+    
+    println(nome)
+}
