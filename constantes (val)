@@ -1,0 +1,9 @@
+
+no kotlin a constante tem um nome diferente
+
+fun main() {
+    //o nome da constante aqui é "val"
+    val nome = "Vitor"    
+    
+    println(nome)
+}
