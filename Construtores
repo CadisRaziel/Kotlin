@@ -1,0 +1,68 @@
+
+//Construtor Primario (primeira forma de criar um construtor)
+
+
+
+fun main() {
+    
+    //utilizando construtor
+    
+	val carro = Carro("Vermelho", 2.10)
+    carro.detalhesDoCarro()
+    
+}
+
+//criando classe construtora repare que eu coloquei () e dentro dele os atributos !! cor e comprimento
+class Carro(cor: String, comprimento: Double ){
+    
+    //aqui eu crio as variaveis que estão como atributos
+    var cor: String = "" //atributo
+    var comprimento: Double
+    
+    //aqui preciso inicializar essas variaveis para que elas sejam acessadas em outra função
+    init{
+        this.cor = cor
+        this.comprimento = comprimento
+    }
+    
+    //ações(Metodos)  
+    fun detalhesDoCarro(){
+     	println("Cor: $cor e comprimento: $comprimento")
+	}
+}
+
+
+
+//Forma secundaria de realizar um construtor(segunda forma de criar o construtor)
+//uma forma mais facil de ler o código
+
+
+fun main() {
+    
+    //utilizando construtor
+    
+	val carro = Carro("Vermelho", 2.10)
+    carro.detalhesDoCarro()
+    
+}
+
+
+//fazendo um construtor de forma mais facil !!
+class Carro{
+    
+    constructor(cor: String, comprimento: Double){
+        this.cor = cor
+        this.comprimento = comprimento
+    }
+    
+   //aqui eu crio as variaveis que estão como atributos
+    var cor: String = "" //atributo
+    var comprimento: Double    
+     
+    //ações(Metodos)  
+    fun detalhesDoCarro(){
+     	println("Cor: $cor e comprimento: $comprimento")
+	}
+}
+
+
