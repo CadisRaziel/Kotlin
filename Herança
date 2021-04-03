@@ -1,0 +1,43 @@
+
+fun main() {
+    	
+    val cachorro = Cachorro()
+    cachorro.Latir()
+    cachorro.Dormir()
+    
+    val passaro = Passaro()
+    passaro.Voando()
+    passaro.Dormir()
+}
+
+//criando herança(necessario por o open no inicio)
+//ao inves de colocar o mesmo metodo para todas as class eu posso criar apenas uma com os metodos iguais
+open class Animal{
+    fun Dormir(){
+        println("Dormir")
+    }
+}
+
+//herdando da classe Animal (: Animal())
+class Cachorro: Animal(){
+    
+    fun Latir(){
+        println("Cachorro esta latindo")
+    }
+    
+//     fun Dormir(){
+//         println("Dormir")
+//     }
+}
+
+class Passaro: Animal(){
+	
+    fun Voando(){
+        println("O passáro esta voando")
+    }
+    
+//      fun Dormir(){
+//         println("Dormir")
+//     }
+    
+}
