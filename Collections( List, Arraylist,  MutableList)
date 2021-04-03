@@ -1,0 +1,48 @@
+//Collections - coleções
+//arrayOf -> array comum, consegue alterar, mais não consegue adicionar
+//ListOf -> Imutável - tamanho fixo - apenas para leitura
+//ArrayListOf -> Mutável - sem tamanho fixo - pode adicionar novos itens 	ou remover
+//MutableListOf -> Mutável - sem tamanho fixo - pode adicionar novos itens ou remover
+
+
+//listOf
+fun main(){
+    
+    //utilizando a list, OBSERVALÇAO: não podemos mais adicionar novos itens nessa lista e nao podemos alterar os filmes da lista!!!
+    var ListaFilmes = listOf("Space Jam", "Senhor dos Anéis", "Looney Tunes")
+    //ListaFilmes.add("OLA") //veja que não podemos adicionar !
+    //ListaFilmes[0] = "Alterado" //veja como não podemos alterar filme da lista
+    println(ListaFilmes)
+}
+
+
+//arrayListOf
+fun main(){
+	
+    var ListaFilmes = arrayListOf("Space Jam", "Senhor dos Anéis", "Looney Tunes")
+    ListaFilmes.add("Cowboy Bebop") //veja que podemos adicionar no arrayList
+    ListaFilmes[1] = "Senhor dos Anéis e as duas torres" //veja que podemos alterar um filme que esta no arraylist
+    ListaFilmes.remove("Space Jam") //veja que podemos remover algum filme do arrayList
+    println(ListaFilmes.size) //.size para ver quantos filmes tem na lista
+    println(ListaFilmes.isEmpty()) //.isEmpty() vai dar um valor boleano para mostrar se a lista ta vazia ou não
+    println(ListaFilmes)
+    
+}
+
+//mutableListOf(mesma coisa do arrayListOf)
+fun main(){
+	
+    var ListaFilmes = mutableListOf("Space Jam", "Senhor dos Anéis", "Looney Tunes")
+    ListaFilmes.add("Cowboy Bebop") //veja que podemos adicionar no arrayList
+    ListaFilmes[1] = "Senhor dos Anéis e as duas torres" //veja que podemos alterar um filme que esta no arraylist
+    ListaFilmes.remove("Space Jam") //veja que podemos remover algum filme do arrayList
+    println(ListaFilmes.size) //.size para ver quantos filmes tem na lista
+    println(ListaFilmes.isEmpty()) //.isEmpty() vai dar um valor boleano para mostrar se a lista ta vazia ou não
+    println(ListaFilmes)
+    
+}
+
+
+
+
+ 
