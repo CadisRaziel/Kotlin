@@ -1,0 +1,32 @@
+
+Enum = Enumaradores, é um tipo de dado que consiste um conjunto de constantes
+//quando que usariamos enum? Suponha que fossemos criar um App onde eu preciso definir o status de um pedido ou um status de um pagamento ou transação,
+//nós precisariamos de valores constantes, para isso o enum !
+
+
+fun main(){
+	//Imagine que eu queria definir varios status de um pagamento
+	//vamos supor que eu comprei um produto e vamos supor que fizemos esse pagamento em um cartão de credito,
+	//e foi no pagSeguro, la existem varios status de pagamentos(em analise, aprovado, reprovado) e nos vamos simular isto aqui \/
+	
+    val pagamento = Pagamento()    
+    pagamento.status = StatusPagamento.APROVADO
+    
+    when{
+        pagamento.status == StatusPagamento.EM_ANALISE -> println("Pagamento em análise")
+        pagamento.status == StatusPagamento.APROVADO -> println("Pagamento aprovado")
+    }
+    
+    
+}
+
+class Pagamento(){
+    var status: StatusPagamento = StatusPagamento.APROVADO
+}
+
+//status de pagamentos com o Enum
+enum class StatusPagamento{
+    
+    //crie constantes com letras maiusculas(boa pratica)
+    CANCELADO, EM_ANALISE, APROVADO, COMPLETO
+}
