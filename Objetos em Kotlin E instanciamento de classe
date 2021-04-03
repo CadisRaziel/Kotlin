@@ -1,0 +1,35 @@
+
+fun main() {
+    
+    //em Kotlin não precisamos instanciar a classe (aqui seria um exemplo nitido que teriamos que instanciar a classe Carro)
+    //o instanciamento em Kotlin é assim \/ (val carro = Carro())
+	val carro = Carro()
+    carro.cor = "Azul"
+    carro.abrirPorta() //para acessar o metodo criado fora dessa função  
+    carro.marchas() //aqui estou acessando um metodo que contem dois metodos (primeiraMarcha, segundaMarcha)
+    println(carro.cor)
+}
+
+class Carro{
+    var cor: String = "" //atributo
+    
+    //ações(Metodos)
+    fun abrirPorta(){
+        println("Abrir a porta do motorista")
+    }
+    
+    fun primeiraMarcha(){
+        println("Engatou a primeira")
+    }
+    
+    fun segundaMarcha(){
+        println("Passou a segunda marcha")
+    }
+    
+    //posso acessar metodos aqui dentro dessa classe tambem !!
+    //e com isso eu posso envia-las para a outra função como marchas()
+    fun marchas(){
+        this.primeiraMarcha()
+        this.segundaMarcha()
+	}
+}
