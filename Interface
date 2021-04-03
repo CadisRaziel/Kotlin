@@ -1,0 +1,45 @@
+fun main() {
+   
+	//interface
+	val limao = Limao()
+    limao.vitaminaE()
+    limao.vitaminaC()
+ 
+    
+    val jabuticaba = Jabuticaba()
+	jabuticaba.vitaminaE()
+ 	jabuticaba.vitaminaC()
+}
+
+//interface (tem duas ações aqui e quando eu implemento ela em metodos diferentes ela pode ter diferentes ações como no exemplo abaixo)
+interface Vitaminas{
+    fun vitaminaE()
+    fun vitaminaC()
+}
+
+open class Fruta{ //quando for herdar essa classe para outras nunca se esqueça de colocar "OPEN" !!!!!!!!
+    fun vitaminas(){
+        println("Todas as frutas tem vitaminas")
+    }
+}
+
+//passando a interface para essa classe
+class Limao: Fruta(), Vitaminas{
+    override fun vitaminaE(){
+        println("O limão é rico em vitamina C")
+    }
+    override fun vitaminaC(){
+        println("O limão não tem vitamnia E")
+    }
+}
+
+class Jabuticaba: Fruta(), Vitaminas{
+     override fun vitaminaE(){
+         println("A jabuticaba é rica em vitaminas E")
+     }
+     override fun vitaminaC(){
+         println("A jabuticaba tem pouca vitamina C")
+     }
+}
+
+//quando voce faz a herança da classe exemplo: class Limao: Fruta(){} o '()' é o construtor dela
