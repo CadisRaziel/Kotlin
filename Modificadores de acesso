@@ -1,0 +1,29 @@
+  //modificadores de acesso
+  //Private = sempre vai ser visivel dentro da classe
+  //protected = visivel em subclasses
+  //public = visivel em todo o projeto (propriedades. funções, metodos)
+
+
+
+fun main() {
+   
+    val veiculo = Veiculo()
+    println(veiculo.cor) //para apresentar uma variavel de uma classe
+    veiculo.parar()
+ 
+}
+
+open class Veiculo{
+     var cor = "Vermelho" //essa variavel só é acessivel dentro dessa classe
+    
+    protected fun parar(){ //esse metodo só é acessivel nessa classe e na classe que herda ela !!       
+       println("O carro esta parando")
+    }
+}
+
+class Carro: Veiculo(){
+    
+    protected fun exibir(){
+        println("Cor: $cor")
+    }
+}
