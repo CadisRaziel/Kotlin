@@ -1,0 +1,189 @@
+"ConstraintLayout"
+layout por padrao = android.support.constraint.ConstraintLayout (é o mais utilizado)
+//ele é mais novo e veio pra substituir o relativeLayout !!
+
+no exemplo abaixo estamos criando 3 botoes, um que vai pegar toda parte de cima, e outros 2 que vao ficar em baixo porém menores
+quando estiver criando o botao usaremos o constraint para deixar o botao responsivo para que ao deitar a tela ele se redimensione junto
+essa parte de redimensionar, colocar em tal lugar é legal fazer em xml, mais colcoar cor ou icone ou coisa mais simples podemos fazer nas propriedades mesmo
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Button 1"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="Button 2"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt1"/>
+
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="Button 3"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@id/bt2"
+        app:layout_constraintTop_toBottomOf="@id/bt1"/>
+
+    
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+// LINEARLAYOUT
+//mais usado para criar telas de logins, aonde os componentes ficam um do lado do outro ou um em baixo do outro !!! (ele é bem responsivo ao rotacionar a tela)
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+</LinearLayout>
+
+
+
+
+//RELATIVELAYOUT 
+//ele tem a mesma ideia co constrantLayout é quase a mesma coisa, porém ele é relativo a outro componente, é muito pouco usado hoje em dia
+//era bem usado no inicio do android studio
+//usado para aplicações bem simples
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button1" />
+
+    <Button
+        android:id="@+id/button30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button29"
+        android:text="Button2"/>
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/button30"
+        android:layout_below="@id/button29"
+        android:text="Button3"/>
+</RelativeLayout>
+
+//alinhando o botao nos 4 cantos usando relativeLayout
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Button1" />
+
+    <Button
+        android:id="@+id/button30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Button1" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Button1" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Button1" />
+
+
+
+</RelativeLayout>
+
+
+// para alinhar um botao ao centro da tela (com relativelayout)
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Button1" />
+
+
+</RelativeLayout>
