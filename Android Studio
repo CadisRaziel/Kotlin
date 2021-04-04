@@ -1,0 +1,58 @@
+podemos fazer o layout tanto por components, colocandos e os programando
+ou podemos criar o layout pelo xml(split)
+Bem parecido com o c#
+Repare que do lado direito tem os atributos, onde podemos personalizar o componente
+e do lado esquerdo tem os componentes !!
+
+
+pasta "res" 
+dentro dela tem uma pasta chamada "drawable" é onde vão ficar as imagens e arquivos desenhaveis (baseados em xml)
+dentro da pasta layouts vai ficar os layouts bem obvio
+dentro da pasta mipmap ela armazenar o icone do nosso aplicativo (e outros icones) (repare que o icone vai ter varias densidades de telas)
+dentro da pasta values tem dois arquivos, colors e e strings, a colors é aonde vai ficar todas as nossas cores da nossa aplicação,
+ja nas strings vai ficar armazenados todos os caracteres escritos no aplicativo (caso eu quero traduzi-lo, eu preciso defini-lo dentro do arquivo string)
+dentro da pasta themes é aonde fica as cores dos temas.
+
+
+
+
+pasta Grandle scripts e Manifests
+
+Grandle scripts = arquivos de configurações do nosso app
+
+//os dois pacotes mais importantes \/
+build.grandle(Project:PrimeiroApp) = ele é tipo o package.json (usaremos pouco)
+build.grandle(Module:PrimeiroApp) = (usaremos muito) \/
+
+defaultConfig {
+ applicationId "com.example.primeiroapp" = importante na hora de colocar o app na googlePlay,
+ minSdkVersion 16 = nunca coloque abaixo de 16 pois se nao o google não vai aceitar !!
+ targetSdkVersion 30 = api 30
+ versionCode 1 = versão atual do nosso projeto, quaso seja feita atualização no projeto precisa alterar esse 1 para 2, 3 e assim vai a cada atualização NUNCA ESQUECER
+ versionName "1.0" = quando atualizar o app altere aqui tambem, é o controle de versão
+ 
+ 
+ 
+aqui \/ é aonde colocamos as bibliotecas !!
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+
+//==========================
+pasta manifests
+
+dentro dela tem um arquivo chamado "AndroidManifest.xml"
+nele tambem conseguimos ver o package.json
+conseguimos ver a string que pega o titulo do projeto
+conseguimos ver o icone que é pegado para usar no aplicativo, e que é usado para outras coisas
+conseguimos ver as atividades do nosso projeto
+
+o mais importante desse arquivo pois é aonde vai ter as permissoes !!!!!
