@@ -1,0 +1,110 @@
+
+      //3 formas de pegar o id de um componente
+//findViewByld = forma usada tanto no java quanto no kotlin
+//Synthetics = foi descontinuado, nao esta sendo compativel com o android studio, porém ainda tem projetos que ele existe
+//viewBiding = forma recomendada para recuperar o id dos components
+
+
+// findViewById
+
+package com.example.primeiroapp
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        var botaoCadastrar = findViewById<Button>(R.id.btn_cadastrar)
+
+        botaoCadastrar.setOnClickListener {
+            Toast.makeText(this, "Usuário Cadastrado com sucesso,", Toast.LENGTH_LONG).show()
+        }
+    }
+}
+
+
+
+//Synthetics 
+//foi descontinuado, tome cuidado, porém as aplicações mais antigas ainda usa ela, porém vai parar de receber suporte
+//para usa-lo na versão mais recente abra a pasta "Grandle.scripts" e abra a pasta "build.grandle(Module:PrimeiroAPP)
+nos plugins abaixo do ultimo ID coloque isso "id 'kotlin-android-extensions'"
+//veja como era realmente igual ao C#
+
+package com.example.primeiroapp
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        //var botaoCadastrar = findViewById<Button>(R.id.btn_cadastrar)
+
+//olhe como não precisamos criar a variavel e apenas pegamos o nome dele como no c#x
+        btn_cadastrar.setOnClickListener {
+            Toast.makeText(this, "Usuário Cadastrado com sucesso,", Toast.LENGTH_LONG).show()
+        }
+    }
+}
+
+
+
+//viewBinding
+//é a forma mais usada, segura e recomendadada !!
+//precisamos ativar ela, então va na pasta "Grandle.scripts" e abra a pasta "build.grandle(Module:PrimeiroAPP)
+//dentro dela coloque isso antes das dependencias e depois do KotlinOptions
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+//ISSO AQUI \/
+android {       
+        viewBinding {
+            enabled = true
+        }
+    }
+
+dependencies {
+
+
+// o codigo \/
+
+package com.example.primeiroapp
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
+import com.example.primeiroapp.databinding.ActivityMainBinding
+
+
+class MainActivity : AppCompatActivity() {
+
+    //primeiro passo, crie essa variavel privada
+    //para cada tela é preciso fazer essa configuração!
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        var botaoCadastrar = binding.btnCadastrar
+
+        botaoCadastrar.setOnClickListener {
+            Toast.makeText(this, "Usuário cadastrado com sucesso", Toast.LENGTH_LONG).show()
+        }
+
+
+    }
+}
